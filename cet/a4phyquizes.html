@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+</head>
+<style>
+	.styl3{
+	  align-content: center;
+	  cursor: pointer;
+	  margin-left: 10%;
+	  
+  }
+</style>
+  
+<body>
+	<ol type="1">
+   <div class="styl3">
+<li> One thousand small water drops of equal radii
+combine to form a big drop. The ratio of final
+surface energy to the total initial surface energy is 
+	<br>
+<input type="radio" name="question1" id="correct1">a) 1 : 1000  
+<br>
+<input type="radio" name="question1">b) 1 : 100 <br>
+<input type="radio" name="question1">c) 1 : 10  <br>
+<input type="radio" name="question1">d) 1 : 1 <br></li>
+
+<li>What is 8+3?<br>
+<input type="radio" name="question2">a) 2 <br>
+<input type="radio" name="question2">b) 8 <br>
+<input type="radio" name="question2" id="correct2">c) 11 <br>
+<input type="radio" name="question2">d) 9 <br></li> 
+
+<li> What is 28+3?<br>
+<input type="radio" name="question3">a) 15 <br>
+<input type="radio" name="question3"id="correct3">b) 31 <br>
+<input type="radio" name="question3">c) 10 <br>
+<input type="radio" name="question3">d) 19 <br></li>
+   </div>
+   </ol>
+	
+
+
+
+
+
+<input type="submit" name="submit" value="SubmitQuiz" onClick="result()">
+
+<script type="text/javascript">
+function result()
+{
+	var score=0;
+	if(document.getElementById('correct1').checked)
+		{	score++;
+		}
+	if(document.getElementById('correct2').checked)
+		{	score++;
+		}
+	if(document.getElementById('correct3').checked)
+		{	score++;
+		}
+ alert("Your score is:"+score);
+ // to print on browser
+ // document.write("Your score is:"+score);
+}
+</script>
+
+<script>
+	const cars = ["a) 1 : 1000"];
+	
+	let text = "";
+	for (let i = 0; i < cars.length; i++) {
+	  text += cars[i] + "<br>";
+	}
+	
+	document.getElementById("demo").innerHTML = text;
+	</script>
+
+
+</body>
+
+
+</html>

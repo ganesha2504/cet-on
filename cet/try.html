@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Quiz</title>
+	<style>
+		h2 {
+			margin-bottom: 10px;
+		}
+		input[type=radio] {
+			margin-right: 10px;
+		}
+		button {
+			margin-top: 10px;
+		}
+        
+	</style>
+</head>
+<body>
+	<h2>HTML Quiz</h2>
+	<form>
+		<div>
+			<p>1. What does HTML stand for?</p>
+			<label><input type="radio" name="question1" value="a"> Hyperlinks and Text Markup Language</label><br>
+			<label><input type="radio" name="question1" value="b"> Home Tool Markup Language</label><br>
+			<label><input type="radio" name="question1" value="c"> Hyper Text Markup Language</label><br>
+			<label><input type="radio" name="question1" value="d"> Hyper Text Model Language</label>
+		</div>
+		<div>
+			<p>2. Which of the following is a block-level element in HTML?</p>
+			<label><input type="radio" name="question2" value="a"> span</label><br>
+			<label><input type="radio" name="question2" value="b"> div</label><br>
+			<label><input type="radio" name="question2" value="c"> a</label><br>
+			<label><input type="radio" name="question2" value="d"> img</label>
+		</div>
+		<button type="button" onclick="checkAnswers()">Submit</button>
+	</form>
+	<div id="result"></div>
+	<script>
+		function checkAnswers() {
+			var score = 0;
+			var q1 = document.querySelector('input[name="question1"]:checked').value;
+			var q2 = document.querySelector('input[name="question2"]:checked').value;
+			if (q1 == "c") {
+				score++;
+			}
+			if (q2 == "b") {
+				score++;
+			}
+			var result = document.getElementById("result");
+			result.innerHTML = "You got " + score + " out of 2 questions correct.";
+		}
+	</script>
+</body>
+</html>
